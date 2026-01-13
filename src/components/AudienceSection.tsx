@@ -3,9 +3,11 @@ import { Check, X } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import profileBg1 from "@/assets/profile-bg-1.jpg";
 import profileBg2 from "@/assets/profile-bg-2.jpg";
+import { useTheme } from "./ThemeProvider";
 
 const AudienceSection = () => {
   const [currentBgIndex, setCurrentBgIndex] = useState(0);
+  const { theme } = useTheme();
 
   const backgrounds = [profileBg1, profileBg2];
 
@@ -45,7 +47,11 @@ const AudienceSection = () => {
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-black/90" />
+        <div
+          className={`absolute inset-0 ${
+            theme === "light" ? "bg-white/80" : "bg-black/90"
+          }`}
+        />
       </div>
 
       <div className="container-wide mx-auto relative z-10">

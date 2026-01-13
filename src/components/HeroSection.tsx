@@ -34,7 +34,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-16 md:pt-32 md:pb-24">
       {/* Background Image */}
       <div className="absolute inset-0">
         {backgrounds.map((src, index) => (
@@ -51,8 +51,8 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <ScrollReveal className="relative z-10 container-wide mx-auto px-6 md:px-12 lg:px-20 pt-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-end">
+      <ScrollReveal className="relative z-10 container-wide mx-auto px-6 md:px-12 lg:px-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-end">
           {/* Left: Narrative */}
           <div className="max-w-3xl">
             {/* Eyebrow */}
@@ -64,20 +64,20 @@ const HeroSection = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium leading-[1.1] mb-6 animate-fade-in-up [animation-delay:0.1s]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium leading-tight md:leading-[1.1] mb-6 md:mb-8 animate-fade-in-up [animation-delay:0.1s]">
               Estruturamos negócios <br />
               <span className="gold-text">que fecham vendas</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl animate-fade-in-up [animation-delay:0.2s]">
+            <p className="text-base md:text-xl text-muted-foreground leading-relaxed mb-8 md:mb-10 max-w-xl animate-fade-in-up [animation-delay:0.2s]">
               Intermediação estratégica de leads qualificados para o mercado 
               imobiliário de alto padrão. Sem marketing tradicional. 
               Com resultado real.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up [animation-delay:0.3s]">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mt-2 md:mt-4 animate-fade-in-up [animation-delay:0.3s]">
               <Button
                 variant="gold"
                 size="xl"
